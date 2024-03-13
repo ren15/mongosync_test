@@ -40,6 +40,7 @@ time.sleep(0.5)
 # change collection1's value
 
 collection1.update_one({"x": 1}, {"$set": {"x": 2}})
+collection1.insert_one({"x": 3})
 time.sleep(0.5)
 
 print_collection("client1", collection1)
