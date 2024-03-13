@@ -22,4 +22,6 @@ jobs:
         bash scripts2/1_start.sh
         bash scripts2/2_rs_init.sh
         bash scripts2/3_start_mongosync.sh &
-        pip install pymongo && python scripts2/5_producer.py
+        bash scripts2/4_send.sh
+        pip install pymongo && PYTHONUNBUFFERED=1 python scripts2/5_producer.py
+        sleep 10
